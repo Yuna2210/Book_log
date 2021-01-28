@@ -1,9 +1,13 @@
 %h1 Work#index
 %p
   -@works.each do |work|
+    Title:
     =link_to work.title,  work_path(work)
     %br
+    Release year:
     =work.release
     %br
+    Description:
     =work.description
+    %br
     %br
