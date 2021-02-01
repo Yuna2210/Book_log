@@ -1,0 +1,17 @@
+%h1 Log your reading book
+%p
+  =@author.name
+  %br
+  =@author.country
+  %br
+  -@author.works.each do |work|
+    =link_to "#{work.title}(#{work.release})", work_path(work)
+  %br
+=link_to 'Add new book', new_work_path(author_id: @author.id)
+%br
+=link_to 'Edit author details',  edit_author_path(@author)
+%br
+=link_to 'Delete the author', author_path(@author), method: :delete, data: {confirm: "Are you sure?"}
+
+%br
+=link_to 'Back to top page', works_path

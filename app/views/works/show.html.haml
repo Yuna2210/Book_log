@@ -6,6 +6,11 @@
  %br
  =@work.description
  %br
+ =link_to 'Add new movie', new_work_path
+ %br
  =link_to 'Edit books details',  edit_work_path(@work)
+ %br
+ =link_to 'Delete the movie', work_path(@work), method: :delete, data: {confirm: "Are you sure?"}
+
  %br
  =link_to 'Back to top page', works_path

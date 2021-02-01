@@ -1,0 +1,12 @@
+%h1 Author list
+%p
+  -@authors.each do |author|
+    Author name:
+    =link_to author.name,  author_path(author)
+    %br
+    country:
+    =author.country
+    %br
+    %br
+
+=link_to 'Register author', new_author_path

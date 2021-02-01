@@ -1,8 +1,11 @@
-%h1 Work#index
+%h1 Book lists
 %p
   -@works.each do |work|
     Title:
     =link_to work.title,  work_path(work)
+    %br
+    Author:
+    =link_to work.author.name, author_path(work.author)
     %br
     Release year:
     =work.release
